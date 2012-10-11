@@ -1,8 +1,8 @@
 FILENAME=thesis
 SOURCES=./$(FILENAME).tex
 BIN=./$(FILENAME).pdf
-TEMP_FILES= thesis.idx thesis.log thesis.aux  thesis.lof  thesis.out thesis.toc
-CC=pdflatex
+TEMP_FILES= thesis.bbl thesis.blg thesis.brf  thesis.idx thesis.log thesis.aux  thesis.lof  thesis.out thesis.toc
+CC=pdflatex -shell-escape
 CC_BIB=bibtex
 
 all: tesi
@@ -19,7 +19,7 @@ view:
 	evince $(BIN)
 
 clean:
-	rm $(TEMP_FILES)
+	rm $(TEMP_FILES) 2>&1;
 
 debug:
 	$(CC) $(SOURCES)
