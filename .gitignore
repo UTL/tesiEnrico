@@ -1,6 +1,7 @@
 *~
 *.backup
 enrico/thesis.pdf
+*-eps-converted-to.pdf
 
 #Files temporanei generati durante la compilazione .tex
 *.aux
