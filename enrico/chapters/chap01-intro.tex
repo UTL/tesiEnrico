@@ -31,7 +31,6 @@ All the activities carried out by the brain, i.e. talking or moving, are perform
 \label{fig:modulesActr}
 \end{figure}
 
-\todo{chiedere a bennati se è giusto}
 Each module is independent from the others, to communicate one to each other they need to pass through the procedural module. As shown in Figure  ~\ref{fig:modulesActr} a module can have more than one module, for example the aural module has two buffers: one is the "Aural-location Buffer", whose function is to get the focus about changes happened in the environment; the second is the "Aural Buffer", to get the real information about the environment.
 
 The buffers are the built in interface between modules, used to exchange chunks between them. Every buffer belongs to a module, while a module can also have no buffers. Each buffer can hold one chunk at a time, which is readable by the other modules, the guidelines say that a buffer can be written only by its owner. 
@@ -41,11 +40,12 @@ Although the modules could work in parallel, their interaction is limited to a s
 
 
 From an informatics point of view \mbox{ACT-R} is a software written in Lisp and its models are written in a Lisp-like language. It is thought to have a modular structure so that it can be easily extended. \mbox{ACT-R 6.0} is the implementation of a state of the ars theory of human cognition, developed by John R. Anderson. Anderson credits Allen Newell as source of influence to his theory.
+\newpage
 \section{OpenCV}
 \section{The objective}
-The objective of this work is to control a mobile robot through the \mbox{ACT-R} framework. The robot will be able to navigate an unknown environment and to find a goal. The most important sensors used by the robot will be a \mbox{web-cam} and the bumpers. The data acquired from the \mbox{web-cam} will be used to improve the estimations of the actual position made with odometry. For example it will use information like perspective lines to be able to move in a corridor.
+The objective of this work is to control a mobile robot through the \mbox{ACT-R} framework. The robot will be able to navigate in real unknown environment and to find an object. The most important sensors used by the robot will be a \mbox{web-cam} and the bumpers. The data acquired from the \mbox{web-cam} will be used to improve the estimations of the actual position made with odometry. For example it will use information like perspective lines to be able to move in a corridor.
 To achieve this goal a software layer is needed to enable the communication between ACT-R and the \mbox{web-cam}. The environment will have some requirements: it will be a relatively small place, like one or more than one room with flat floor, this due to the limited capability of movement of the robot, and it has to be mostly static. In the environment will be placed some \mbox{QR code}, used as landmarks. Those landmarks will be used to orientate easier in the environment.
-The robot should also be able to avoid slow moving objects. From this point of view the robot will be a reactive agent, able to change its planning while the world near it changes. \todo{finire gli obiettivi}
+The robot should also be able to avoid slow moving objects. From this point of view the robot will be a reactive agent, able to change its planning while the world near it changes. \todo{Cosa altro?}
 
 
 
