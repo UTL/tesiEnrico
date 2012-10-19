@@ -31,7 +31,7 @@ All the activities carried out by the brain, i.e. talking or moving, are perform
 \label{fig:modulesActr}
 \end{figure}
 
-Each module is independent from the others, to communicate one to each other they need to pass through the procedural module. As shown in Figure  ~\ref{fig:modulesActr} a module can have more than one module, for example the aural module has two buffers: one is the "Aural-location Buffer", whose function is to get the focus about changes happened in the environment; the second is the "Aural Buffer", to get the real information about the environment.
+Each module is independent from the others, to communicate one to each other they need to pass through the procedural module. As shown in Figure  ~\ref{fig:modulesActr} a module can have more than one buffer, for example the aural module has two buffers: one is the "Aural-location Buffer", whose function is to get the focus about changes happened in the environment; the second is the "Aural Buffer", to get the real information about the environment.
 
 The buffers are the built in interface between modules, used to exchange chunks between them. Every buffer belongs to a module, while a module can also have no buffers. Each buffer can hold one chunk at a time, which is readable by the other modules, the guidelines say that a buffer can be written only by its owner. 
 
